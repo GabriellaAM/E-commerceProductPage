@@ -1,2 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
 
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+}
 
+html {
+    font-size: 62.5%;
+
+    --orange: hsl(26, 100%, 55%);
+    --paleOrange: hsl(25, 100%, 94%);
+
+    --veryDarkBlue: hsl(220, 13%, 13%);
+    --darkGrayishBlue: hsl(219, 9%, 45%);
+    --grayishBlue: hsl(220, 14%, 75%);
+    --lightGrayishBlue: hsl(223, 64%, 98%);
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 0%);
+
+    --mainFont: 'Kumbh Sans', sans-serif;
+
+    font-family: var(--mainFont);
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+    padding: 0rem 15rem;
+}
+
+header img {
+    width: 15rem;
+}
+
+header nav {
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: var(--darkGrayishBlue);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: .5rem;
+    gap: 5rem;
+    padding: 4rem 0rem;
+    border-bottom: 1px solid var(--grayishBlue);
+    width: 100%;
+}
+
+header nav a {
+    all: unset;
+    color: inherit;
+    text-decoration: none;
+}
+
+header nav .user-area {
+    display: flex;
+    flex-direction: row;
+    gap: 3.5rem;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+}
+
+header nav .user-area button {
+    background-color: transparent;
+}
+
+header nav .user-area button img {
+    width: 2.3rem;
+}
+
+header nav .user-area .avatar-image {
+    width: 4rem;
+}
