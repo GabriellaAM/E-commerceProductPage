@@ -29,7 +29,7 @@
   <header>
 
     <nav>
-      <img src="./images/logo.svg" alt="Logo">
+      <img src="./images/logo.svg" alt="Logo" class="logo">
       <a href="#">Collections</a>
       <a href="#">Men</a>
       <a href="#">Women</a>
@@ -37,8 +37,16 @@
       <a href="#">Contact</a>
 
       <div class="user-area">
-        <button><img src="./images/icon-cart.svg" alt="Carrinho"></button>
-        <img src="./images/image-avatar.png" alt="Avatar" class="avatar-image">
+        <button class="cart"><img src="./images/icon-cart.svg" alt="Carrinho"></button>
+
+        <div class="productsCart">
+          <h3>Cart</h3>
+          <p>Your cart is empty.</p>
+        </div>
+
+        <div class="avatar-image-container">
+          <img src="./images/image-avatar.png" alt="Avatar" class="avatar-image">
+        </div>
       </div>
     </nav>
 
@@ -51,10 +59,22 @@
       <img src="./images/image-product-1.jpg" alt="" class="mainImage">
 
       <div class="image-navegation">
-        <button><img src="./images/image-product-1-thumbnail.jpg" alt=""></button>
-        <button><img src="./images/image-product-2-thumbnail.jpg" alt=""></button>
-        <button><img src="./images/image-product-3-thumbnail.jpg" alt=""></button>
-        <button><img src="./images/image-product-4-thumbnail.jpg" alt=""></button>
+
+        <div class="image-navegation__buttonWrapper">
+          <button><img src="./images/image-product-1-thumbnail.jpg" alt=""></button>
+        </div>
+
+        <div class="image-navegation__buttonWrapper">
+          <button><img src="./images/image-product-2-thumbnail.jpg" alt=""></button>
+        </div>
+
+        <div class="image-navegation__buttonWrapper">
+          <button><img src="./images/image-product-3-thumbnail.jpg" alt=""></button>
+        </div>
+
+        <div class="image-navegation__buttonWrapper">
+          <button><img src="./images/image-product-4-thumbnail.jpg" alt=""></button>
+        </div>
       </div>
 
     </div>
@@ -83,8 +103,8 @@
           <button class="quantityAdd"><img src="./images/icon-plus.svg" alt="" srcset=""></button>
         </div>
 
-        <button class="cartButton"> 
-          <img src="./images/icon-cart copy.svg" alt="" srcset=""> 
+        <button class="cartButton">
+          <img src="./images/icon-cart copy.svg" alt="" srcset="">
           <p>Add to cart</p>
         </button>
       </div>
@@ -98,5 +118,7 @@
     Coded by <a href="#">Your Name Here</a>.
   </div>
 </body>
+
+<script src="./script.js"></script>
 
 </html>
