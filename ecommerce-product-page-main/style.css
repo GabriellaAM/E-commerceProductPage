@@ -115,7 +115,7 @@ main .description-area {
 }
 
 main .description-area h3 {
-    color: var(--darkGrayishBlue);
+    color: var(--orange);
     margin-bottom: 1.5rem;
     letter-spacing: .15rem;
 }
@@ -147,7 +147,7 @@ main .description-area .pricePercentage .price {
 }
 
 main .description-area .pricePercentage .percentage {
-    background-color: var(--veryDarkBlue);
+    background-color: var(--orange);
     color: var(--white);
     font-size: 1.3rem;
     font-weight: 500;
@@ -175,14 +175,14 @@ main .description-area .quantityButton .quantityWrapper{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: var(--LightgrayishBlue);
+    background-color: var(--lightGrayishBlue);
     padding: 1.5rem;
     gap: 4rem;
     border-radius: .5rem;
 }
 
 main .description-area .quantityButton .quantityWrapper button{
-    background-color: var(--LightgrayishBlue);
+    background-color: var(--lightGrayishBlue);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -204,7 +204,7 @@ main .description-area .quantityButton .cartButton img{
 
 main .description-area .quantityButton .cartButton{
     background-color: var(--orange);
-    color: var(--veryDarkBlue);
+    color: var(--white);
     font-size: 1.3rem;
     font-weight: 800;
     display: flex;
