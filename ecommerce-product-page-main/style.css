@@ -26,6 +26,8 @@ html {
 }
 
 body {
+    width: 100%;
+    height: 100vh;
     background-color: var(--white);
 }
 
@@ -36,12 +38,20 @@ header {
     height: 12rem;
     margin: 0rem 15rem;
     border-bottom: 1px solid var(--grayishBlue);
+    position: fixed;
+    width: calc(100% - 30rem);
+    top: 0;
+    left: 0;
+    background-color: white;
+}
+
+header nav .menu-icon {
+    display: none;
 }
 
 header nav .logo {
-    width: 15rem;
+    width: clamp(10rem, 10vw, 15rem);
     border-bottom: 4px solid transparent;
-
 }
 
 header nav {
@@ -84,7 +94,7 @@ header nav .user-area {
     border-bottom: 4px solid transparent;
 }
 
-header nav .user-area .productsCart{
+header nav .user-area .productsCart {
     position: absolute;
     background-color: var(--white);
     box-shadow: 0px 0px 20px 3px rgba(0, 0, 0, 0.150);
@@ -98,7 +108,7 @@ header nav .user-area .productsCart{
     visibility: hidden;
 }
 
-header nav .user-area .productsCart h3{
+header nav .user-area .productsCart h3 {
     color: var(--black);
     font-size: 1.5rem;
     padding: 2rem;
@@ -106,7 +116,7 @@ header nav .user-area .productsCart h3{
     filter: brightness(1.16);
 }
 
-header nav .user-area .productsCart p{
+header nav .user-area .productsCart p {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -155,12 +165,12 @@ header nav .user-area .avatar-image:hover {
 main {
     display: flex;
     flex-direction: row;
-    margin: 8rem 20rem;
-    gap: 9rem;
+    margin: 18rem 20rem;
+    gap: clamp(4.5rem, 7vw, 9rem);
 }
 
 main .image-pack .mainImage {
-    width: 40rem;
+    width: clamp(30rem, 30vw, 40rem);
     border-radius: 1rem;
 }
 
@@ -172,8 +182,8 @@ main .image-pack .image-navegation {
 }
 
 .image-navegation__buttonWrapper {
-    width: 8.3rem;
-    height: 8.3rem;
+    width: clamp(6.8rem, 7.3vw, 8.3rem);
+    height: clamp(6.8rem, 7.3vw, 8.3rem);
     flex-shrink: 0;
     display: flex;
     justify-content: center;
@@ -181,7 +191,7 @@ main .image-pack .image-navegation {
 }
 
 main .image-pack .image-navegation img {
-    width: 8rem;
+    width: clamp(6.5rem, 7vw, 8rem);
     border-radius: 1rem;
     cursor: pointer;
     transition-duration: 80ms;
@@ -208,7 +218,7 @@ main .image-pack .image-navegation img:hover {
 }
 
 main .description-area {
-    padding-top: 7rem;
+    padding-top: clamp(3rem, 6vw, 7rem);
 }
 
 main .description-area h3 {
@@ -218,7 +228,7 @@ main .description-area h3 {
 }
 
 main .description-area h1 {
-    font-size: 3.5rem;
+    font-size: clamp(2.8rem, 2.5vw, 3.5rem);
     color: var(--veryDarkBlue);
 }
 
@@ -267,7 +277,7 @@ main .description-area .quantityButton {
     gap: 1.5rem;
 }
 
-main .description-area .quantityButton .quantityWrapper{
+main .description-area .quantityButton .quantityWrapper {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -278,7 +288,7 @@ main .description-area .quantityButton .quantityWrapper{
     border-radius: .5rem;
 }
 
-main .description-area .quantityButton .quantityWrapper button{
+main .description-area .quantityButton .quantityWrapper button {
     background-color: var(--lightGrayishBlue);
     display: flex;
     justify-content: center;
@@ -286,7 +296,7 @@ main .description-area .quantityButton .quantityWrapper button{
     cursor: pointer;
 }
 
-main .description-area .quantityButton .quantityWrapper button img{
+main .description-area .quantityButton .quantityWrapper button img {
     width: 1.2rem;
 }
 
@@ -294,16 +304,16 @@ main .description-area .quantityButton .quantityWrapper button img:hover {
     filter: brightness(1.4);
 }
 
-main .description-area .quantityButton .quantityWrapper .quantity{
+main .description-area .quantityButton .quantityWrapper .quantity {
     font-size: 1.4rem;
     font-weight: 800;
 }
 
-main .description-area .quantityButton .cartButton img{
+main .description-area .quantityButton .cartButton img {
     width: 1.5rem;
 }
 
-main .description-area .quantityButton .cartButton{
+main .description-area .quantityButton .cartButton {
     background-color: var(--orange);
     color: var(--white);
     font-size: 1.3rem;
@@ -322,4 +332,81 @@ main .description-area .quantityButton .cartButton{
 
 main .description-area .quantityButton .cartButton:hover {
     filter: brightness(1.15);
+}
+
+@media (max-width: 1024px) {
+
+    header {
+        height: clamp(7rem, 10vw, 10rem);
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+
+    header nav {
+        gap: 2.5rem;
+        width: 100%;
+        margin: 0px clamp(2rem, 4vw, 5rem);
+    }
+
+    header nav .menu-icon {
+        border-top: .4rem solid transparent;
+        gap: .4rem;
+        width: 4rem;
+        height: 3rem;
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+    }
+
+    header nav .menu-icon span {
+        display: block;
+        height: 4px;
+        width: 100%;
+        background-color: var(--darkGrayishBlue);
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .menu-icon.active span:nth-child(1) {
+        transform: translateY(13px) rotate(45deg);
+        /* Gira a primeira linha */
+    }
+
+    .menu-icon.active span:nth-child(2) {
+        opacity: 0;
+        /* Esconde a linha do meio */
+    }
+
+    .menu-icon.active span:nth-child(3) {
+        transform: translateY(-13px) rotate(-45deg);
+        /* Gira a terceira linha */
+    }
+
+    header nav .logo {
+        width: clamp(13rem, 15vw, 20rem);
+    }
+
+    header nav a {
+        display: none;
+        height: 4px;
+        width: 100%;
+        background-color: #333;
+        border-radius: 2px;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    header nav .user-area {
+        gap: clamp(2.4rem, 4vw, 3.5rem);
+    }
+
+    .avatar-image-container {
+        width: clamp(3.8rem, 4.8vw, 4.4rem);
+        height: clamp(3.8rem, 4.8vw, 4.4rem);
+    }
+
+    header nav .user-area .avatar-image {
+        width: clamp(3.5rem, 4.5vw, 4.1rem);
+    }
 }
