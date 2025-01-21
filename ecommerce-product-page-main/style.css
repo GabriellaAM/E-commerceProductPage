@@ -43,6 +43,7 @@ header {
     top: 0;
     left: 0;
     background-color: white;
+    z-index: 1000;
 }
 
 header nav .menu-icon {
@@ -68,12 +69,35 @@ header nav {
     height: 100%;
 }
 
+header nav .menuLinks-Wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    width: 100%;
+    height: 100%;
+}
+
+header nav .menuLinks-Wrapper .menuLinks {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    width: 100%;
+    height: 100%;
+}
+
+header nav .menuLinks-Wrapper .closeButton {
+    display: none;
+}
+
 header nav a {
-    all: unset;
-    color: inherit;
+    color: var(--darkGrayishBlue);
     text-decoration: none;
     cursor: pointer;
-    height: 90%;
+    height: 91%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -167,6 +191,10 @@ main {
     flex-direction: row;
     margin: 18rem 20rem;
     gap: clamp(4.5rem, 7vw, 9rem);
+}
+
+main .image-pack .nextPrevious-buttonWrapper {
+    display: none;
 }
 
 main .image-pack .mainImage {
@@ -334,6 +362,16 @@ main .description-area .quantityButton .cartButton:hover {
     filter: brightness(1.15);
 }
 
+footer {
+    font-size: 11px;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+footer a {
+    color: hsl(228, 45%, 44%);
+}
+
 @media (max-width: 1024px) {
 
     header {
@@ -343,6 +381,8 @@ main .description-area .quantityButton .cartButton:hover {
         width: 100%;
         top: 0;
         left: 0;
+        position: fixed !important;
+        z-index: 1000;
     }
 
     header nav {
@@ -364,7 +404,7 @@ main .description-area .quantityButton .cartButton:hover {
     header nav .menu-icon span {
         display: block;
         height: 4px;
-        width: 100%;
+        width: 2.9rem;
         background-color: var(--darkGrayishBlue);
         transition: transform 0.3s ease, opacity 0.3s ease;
     }
@@ -388,13 +428,48 @@ main .description-area .quantityButton .cartButton:hover {
         width: clamp(13rem, 15vw, 20rem);
     }
 
-    header nav a {
-        display: none;
-        height: 4px;
+    header nav .menuLinks-Wrapper .closeButton {
+        display: flex;
+        flex-direction: row;
         width: 100%;
-        background-color: #333;
-        border-radius: 2px;
-        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    header nav .menuLinks-Wrapper .closeButton button {
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    header nav .menuLinks-Wrapper {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        background-color: var(--white);
+        left: 0;
+        top: 0;
+        height: 100vh;
+        margin: 0;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 2.5rem;
+        padding: 3rem;
+    }
+
+    header nav .menuLinks-Wrapper .menuLinks{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--white);
+        height: 50%;
+        font-weight: 800;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 2.5rem;
+    }
+
+    header nav .menuLinks-Wrapper a {
+        color: var(--black);
+        height: auto;
     }
 
     header nav .user-area {
@@ -408,5 +483,75 @@ main .description-area .quantityButton .cartButton:hover {
 
     header nav .user-area .avatar-image {
         width: clamp(3.5rem, 4.5vw, 4.1rem);
+    }
+
+    main {
+        flex-direction: column;
+        margin: clamp(7rem, 10vw, 10rem) 0rem 0rem 0rem;
+        gap: 0rem;
+    }
+
+    main .image-pack {
+        width: 100%;
+        height: auto;
+    }
+
+    main .image-pack .mainImage-Wrapper {
+        position: relative;
+    }
+
+    main .image-pack .nextPrevious-buttonWrapper {
+        display: block;
+        position: absolute;
+        width: 100%;
+        padding: 0px 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        top: 50%;
+
+    }
+
+    main .image-pack .nextPrevious-buttonWrapper button {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    main .image-pack .mainImage {
+        width: max(100%, 10rem);
+        height: auto;
+        object-fit: cover;
+        border-radius: 0rem;
+    }
+
+    main .image-pack .image-navegation {
+        display: none;
+    }
+
+    main .description-area {
+        padding: clamp(2rem, 4vw, 5rem) 3rem;
+    }
+
+    main .description-area .pricePercentage-wrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    main .description-area .quantityButton {
+        flex-direction: column;
+    }
+
+    main .description-area .quantityButton .quantityWrapper {
+        justify-content: space-between;
+    }
+
+    main .description-area .quantityButton .cartButton {
+        padding: 2rem 6.5rem;
     }
 }

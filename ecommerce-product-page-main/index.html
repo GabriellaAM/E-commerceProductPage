@@ -10,18 +10,6 @@
 
   <title>Frontend Mentor | E-commerce product page</title>
   <link rel="stylesheet" href="style.css">
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
-
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-  </style>
 </head>
 
 <body>
@@ -35,13 +23,28 @@
         <span></span>
         <span></span>
       </div>
-  
+
       <img src="./images/logo.svg" alt="Logo" class="logo">
-      <a href="#">Collections</a>
-      <a href="#">Men</a>
-      <a href="#">Women</a>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
+
+      <div class="menuLinks-Wrapper">
+
+        <div class="closeButton">
+
+          <button><img src="./images/icon-close.svg" alt=""></button>
+
+        </div>
+
+        <div class="menuLinks">
+
+          <a href="#">Collections</a>
+          <a href="#">Men</a>
+          <a href="#">Women</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+
+        </div>
+
+      </div>
 
       <div class="user-area">
         <button class="cart"><img src="./images/icon-cart.svg" alt="Carrinho"></button>
@@ -63,7 +66,19 @@
 
     <div class="image-pack">
 
-      <img src="./images/image-product-1.jpg" alt="" class="mainImage">
+      <div class="mainImage-Wrapper">
+
+        <img src="./images/image-product-1.jpg" alt="" class="mainImage">
+
+        <div class="nextPrevious-buttonWrapper">
+
+          <button class="buttonPrevious"><img src="./images/icon-previous.svg" alt=""></button>
+
+          <button class="buttonNext"><img src="./images/icon-next.svg" alt=""></button>
+
+        </div>
+
+      </div>
 
       <div class="image-navegation">
 
@@ -95,12 +110,16 @@
       <p class="description">These low-profile sneakers are your perfect casual wear companion. Featuring a
         durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
 
-      <div class="pricePercentage">
-        <p class="price">$125.00</p>
-        <p class="percentage">50%</p>
-      </div>
+      <div class="pricePercentage-wrapper">
 
-      <p class="past-price">$250.00</p>
+        <div class="pricePercentage">
+          <p class="price">$125.00</p>
+          <p class="percentage">50%</p>
+        </div>
+
+        <p class="past-price">$250.00</p>
+
+      </div>
 
       <div class="quantityButton">
 
@@ -120,10 +139,10 @@
 
   </main>
 
-  <div class="attribution">
+  <footer>
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </footer>
 </body>
 
 <script src="./script.js"></script>
