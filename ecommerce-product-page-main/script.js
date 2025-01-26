@@ -142,13 +142,15 @@ document.querySelector(".mainImage").addEventListener('mouseout', function () {
 
 mainImage.addEventListener('click', (event) => {
 
-    selectedImage = event.target;
-    lightboxMainImage = document.querySelector(".lightbox-mainImage");
-    lightboxMainImage.src = selectedImage.src;
+    if (window.innerWidth >= 1024) {
+        selectedImage = event.target;
+        lightboxMainImage = document.querySelector(".lightbox-mainImage");
+        lightboxMainImage.src = selectedImage.src;
 
-    document.querySelector(".screenBlur").style.display = 'block';
-    document.body.classList.add('modalOpen');
-    document.querySelector(".lightbox").style.display = 'flex';
+        document.querySelector(".screenBlur").style.display = 'block';
+        document.body.classList.add('modalOpen');
+        document.querySelector(".lightbox").style.display = 'flex';
+    }
 })
 
 
@@ -241,6 +243,33 @@ menuIcon.addEventListener('click', () => {
     menuLinksWrapper.classList.add("open");
 })
 
+
+// Alternar entre imagens mobile
+
+let MainImageMobile = document.querySelector(".mainImage");
+let ThumbnailsMobile = document.querySelectorAll(".thumbnail");
+let NextButtonMobile = document.querySelector(".buttonNext");
+let PreviousButtonMobile = document.querySelector(".buttonPrevious");
+
+let LargeImagesMobile = Array.from(ThumbnailsMobile).map((thumb) => thumb.dataset.large);
+let SmallImagesMobile = Array.from(ThumbnailsMobile);
+
+let indexMobile = 0;
+
+function updateMobileMainImageArrows(indexMobile) {
+
+    MainImageMobile.src = LargeImagesMobile[indexMobile];
+}
+
+NextButtonMobile.addEventListener('click', () => {
+    indexMobile = (indexMobile + 1) % LargeImagesMobile.length;
+    updateMobileMainImageArrows(indexMobile);
+});
+
+PreviousButtonMobile.addEventListener('click', () => {
+    indexMobile = (indexMobile - 1 + LargeImagesMobile.length) % LargeImagesMobile.length;
+    updateMobileMainImageArrows(indexMobile);
+});
 
 
 
