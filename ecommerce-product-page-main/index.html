@@ -14,6 +14,56 @@
 
 <body>
 
+  <div class="screenBlur"></div>
+
+  <div class="lightbox">
+
+    <div class="lightbox-wrapper">
+
+      <div class="lightbox-icon-close-wrapper">
+        <img src="./images/icon-close copy.svg" alt="" class="lightbox-icon-close">
+      </div>
+
+      <div class="lightbox-mainImage-Wrapper">
+
+        <img src="" alt="" class="lightbox-mainImage">
+
+        <div class="lightbox-nextPrevious-buttonWrapper">
+
+          <button class="lightbox-buttonPrevious"><img src="./images/icon-previous.svg" alt=""></button>
+
+          <button class="lightbox-buttonNext"><img src="./images/icon-next.svg" alt=""></button>
+
+        </div>
+
+      </div>
+
+      <div class="lightbox-image-navegation">
+
+        <div class="lightbox-image-navegation__buttonWrapper">
+          <button class="lightbox-thumbnail-button"><img src="./images/image-product-1-thumbnail.jpg" alt=""
+              class="lightbox-thumbnail" data-large="./images/image-product-1.jpg"></button>
+        </div>
+
+        <div class="lightbox-image-navegation__buttonWrapper">
+          <button class="lightbox-thumbnail-button"><img src="./images/image-product-2-thumbnail.jpg" alt=""
+              class="lightbox-thumbnail" data-large="./images/image-product-2.jpg"></button>
+        </div>
+
+        <div class="lightbox-image-navegation__buttonWrapper">
+          <button class="lightbox-thumbnail-button"><img src="./images/image-product-3-thumbnail.jpg" alt=""
+              class="lightbox-thumbnail" data-large="./images/image-product-3.jpg"></button>
+        </div>
+
+        <div class="lightbox-image-navegation__buttonWrapper">
+          <button class="lightbox-thumbnail-button"><img src="./images/image-product-4-thumbnail.jpg" alt=""
+              class="lightbox-thumbnail" data-large="./images/image-product-4.jpg"></button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
   <header>
 
     <nav>
@@ -47,11 +97,51 @@
       </div>
 
       <div class="user-area">
-        <button class="cart"><img src="./images/icon-cart.svg" alt="Carrinho"></button>
+        <button class="cart">
+          <img src="./images/icon-cart.svg" alt="Carrinho">
+
+          <div class="cart-display-quantity">
+            <p class="cart-display-quantity-number">1</p>
+          </div>
+        </button>
 
         <div class="productsCart">
           <h3>Cart</h3>
-          <p>Your cart is empty.</p>
+          <p class="cartEmptyP">Your cart is empty.</p>
+
+          <div class="cart-product">
+
+            <div class="cart-product-button-wrapper">
+
+              <img class="cart-product-button-wrapper-img" src="./images/image-product-1-thumbnail.jpg" alt="">
+
+              <div class="cart-product-wrapper">
+
+                <h3 class="cart-product-title">Fall Limited Edition Sneakers</h3>
+
+                <div class="cart-product-price-wrapper">
+
+                  <div class="cart-product-price-quantity-wrapper">
+
+                    <h3 class="cart-product-price">$125.00 x</h3>
+                    <h3 class="cart-product-quantity">3</h3>
+
+                  </div>
+
+                  <h3 class="cart-product-final-price">$375.00</h3>
+
+                </div>
+
+              </div>
+
+              <button class="delete-button"><img src="./images/icon-delete.svg" alt=""></button>
+
+            </div>
+
+            <button class="checkout-button">Checkout</button>
+
+          </div>
+
         </div>
 
         <div class="avatar-image-container">
@@ -83,19 +173,23 @@
       <div class="image-navegation">
 
         <div class="image-navegation__buttonWrapper">
-          <button><img src="./images/image-product-1-thumbnail.jpg" alt=""></button>
+          <button><img src="./images/image-product-1-thumbnail.jpg" alt="" class="thumbnail"
+              data-large="./images/image-product-1.jpg"></button>
         </div>
 
         <div class="image-navegation__buttonWrapper">
-          <button><img src="./images/image-product-2-thumbnail.jpg" alt=""></button>
+          <button><img src="./images/image-product-2-thumbnail.jpg" alt="" class="thumbnail"
+              data-large="./images/image-product-2.jpg"></button>
         </div>
 
         <div class="image-navegation__buttonWrapper">
-          <button><img src="./images/image-product-3-thumbnail.jpg" alt=""></button>
+          <button><img src="./images/image-product-3-thumbnail.jpg" alt="" class="thumbnail"
+              data-large="./images/image-product-3.jpg"></button>
         </div>
 
         <div class="image-navegation__buttonWrapper">
-          <button><img src="./images/image-product-4-thumbnail.jpg" alt=""></button>
+          <button><img src="./images/image-product-4-thumbnail.jpg" alt="" class="thumbnail"
+              data-large="./images/image-product-4.jpg"></button>
         </div>
       </div>
 
