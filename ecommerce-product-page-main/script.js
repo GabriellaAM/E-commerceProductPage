@@ -227,6 +227,20 @@ deleteProductCart.addEventListener('click', () => {
     CartEmpty.style.visibility = 'visible';
 })
 
+// Fechar Menu Mobile
+
+let buttonCloseMobileMenu = document.querySelector(".closeButtonIcon");
+let menuLinksWrapper = document.querySelector(".menuLinks-Wrapper");
+let menuIcon = document.querySelector(".menu-icon");
+
+buttonCloseMobileMenu.addEventListener('click', () => {
+    menuLinksWrapper.classList.remove("open");
+})
+
+menuIcon.addEventListener('click', () => {
+    menuLinksWrapper.classList.add("open");
+})
+
 
 
 

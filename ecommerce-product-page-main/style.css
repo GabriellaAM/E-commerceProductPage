@@ -25,9 +25,7 @@ html {
     font-family: var(--mainFont);
 }
 
-.AddToCartButtonActive {
-
-}
+.AddToCartButtonActive {}
 
 body {
     width: 100%;
@@ -59,7 +57,7 @@ body .lightbox .lightbox-icon-close-wrapper {
     margin-bottom: 1.5rem;
 }
 
-body .lightbox .lightbox-icon-close-wrapper .lightbox-icon-close{
+body .lightbox .lightbox-icon-close-wrapper .lightbox-icon-close {
     cursor: pointer;
 }
 
@@ -659,21 +657,6 @@ footer a {
         transition: transform 0.3s ease, opacity 0.3s ease;
     }
 
-    .menu-icon.active span:nth-child(1) {
-        transform: translateY(13px) rotate(45deg);
-        /* Gira a primeira linha */
-    }
-
-    .menu-icon.active span:nth-child(2) {
-        opacity: 0;
-        /* Esconde a linha do meio */
-    }
-
-    .menu-icon.active span:nth-child(3) {
-        transform: translateY(-13px) rotate(-45deg);
-        /* Gira a terceira linha */
-    }
-
     header nav .logo {
         width: clamp(13rem, 15vw, 20rem);
     }
@@ -703,9 +686,15 @@ footer a {
         justify-content: flex-start;
         gap: 2.5rem;
         padding: 3rem;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
     }
 
-    header nav .menuLinks-Wrapper .menuLinks{
+    header nav .menuLinks-Wrapper.open {
+        transform: translateX(0);
+    }
+
+    header nav .menuLinks-Wrapper .menuLinks {
         display: flex;
         flex-direction: column;
         width: 100%;
