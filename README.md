@@ -34,7 +34,7 @@ Os usuários devem ser capazes de:
 ### Links
 
 - <p>Preview:</p>
-<a href="https://gabriellaam.github.io/E-commerceProductPage/"></a>
+<a href="https://gabriellaam.github.io/E-commerceProductPage/">https://gabriellaam.github.io/E-commerceProductPage/</a>
 
 ## Sobre o Processo
 
@@ -47,9 +47,7 @@ Confira nessa sessão quais foram as tecnologias e conceitos mais utilizados nes
 <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
 <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
 </span>
-
 &nbsp;
-
 - <b>HTML</b>: linguagem de marcação usada para estruturar o conteúdo e elementos de páginas web.
 - <b>CSS</b>: linguagem de estilo utilizada para definir o design, layout e aparência visual de páginas web.
 - <b>JavaScript</b>: linguagem de programação responsável por adicionar interatividade e funcionalidades dinâmicas às páginas web.
